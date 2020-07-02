@@ -1,0 +1,14 @@
+<div class="container m-5">
+    <form class="form-inline waves-light" id="buscar" mdbWavesEffect>
+        <div class="md-form mt-0">
+            <i class="fas fa-user prefix m-2"></i>
+            <input class="form-control mr-sm-2" (keyup)="buscarArtista(buscarTexto.value)" color="danger" type="text" placeholder="Buscar por artista" aria-label="Search" #buscarTexto>
+        </div>
+    </form>
+</div>
+<app-loading *ngIf="loading"></app-loading>
+<div class="container">
+    <div class="card-columns">
+        <app-tarjetas *ngFor="let item of musics" [items]="item" [index]="item.idArtista"></app-tarjetas>
+    </div>
+</div>

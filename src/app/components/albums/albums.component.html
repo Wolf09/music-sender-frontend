@@ -1,0 +1,13 @@
+<div class="container m-3">
+    <div class="card-columns">
+        <div (click)="verAlbum(album.idAlbum)" *ngFor="let album of albums" class="card puntero">
+            <img src="https://cdn.shopify.com/s/files/1/0087/7943/1993/products/GRANDE-TUN_LP_Mockup_black_1024x1024.png?v=1548367060" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{album.nombreAlb}}</h5>
+                <p class="card-text">{{album.nombreGenero}}</p>
+                <p class="card-text">Número de canciones {{album.NroCanciones}}</p>
+                <!-- <button (click)="verAlbum(album.idAlbum)" class="btn btn-primary">Ver canciones</button> -->
+            </div>
+        </div>
+    </div>
+</div>
